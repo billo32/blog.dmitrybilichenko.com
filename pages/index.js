@@ -1,101 +1,133 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
+import 'bulma/css/bulma.min.css'
 
-import NewsletterForm from '@/components/NewsletterForm'
+import { useEffect, useState } from 'react'
+// import logo from './public/static/images/bd-logo-white.svg'
+// import OwlSound from './public/owl_great_horned.mp3'
+import { Hero, Columns } from 'react-bulma-components'
+import WorkPlace from '@/components/dbs/workplace'
+import classes from '@/components/dbs/workplace.module.css'
 
-const MAX_DISPLAY = 5
+export default function Home() {
+  const [audio, setAudio] = useState(null)
+  useEffect(() => {
+    setAudio(new Audio('/static/sounds/owl_great_horned.mp3'))
+    // only run once on the first render on the client
+  }, [])
 
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  // const audio = new Audio('static/sounds/owl_great_horned.mp3')
 
-  return { props: { posts } }
-}
-
-export default function Home({ posts }) {
   return (
-    <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
+    <div className="App">
+      {/* <div className="links">
+        <ul>
+          <li>Phone</li>
+          <li>Email</li>
+          <li>Email 2</li>
         </ul>
-      </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
+      </div> */}
+      <Hero className="hero is-fullheight">
+        <div className="hero-head">
+          <img
+            src={'/static/images/bd-logo-white.png'}
+            onClick={() => {
+              audio.play()
+            }}
+            className="head-logo"
+            alt="logo"
+          />
         </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
+        <div className="hero-body"></div>
+        <div className="hero-foot">
+          <Columns className="info">
+            <div className="column is-two-thirds-tablet is-three-quarters-mobile is-narrow info-container">
+              {/* Lorem ipsum dolor sit amet consectetur adipiscing elit, urna
+              consequat felis vehicula class ultricies mollis dictumst, aenean
+              non a in donec nulla. Phasellus ante pellentesque erat cum risus
+              consequat imperdiet aliquam, integer placerat et turpis mi eros
+              nec lobortis taciti, vehicula nisl litora tellus ligula porttitor
+              metus. */}
+              I am an experienced Software Development Team Leader / IT Project Manager with a rich
+              experience in the development and implementation of software projects. Over the years,
+              I have managed projects of various complexities, from simple websites to complex
+              worldwide business process automation systems.
+            </div>
+          </Columns>
         </div>
-      )}
-    </>
+      </Hero>
+      <Hero className="hero is-large">
+        <div className="hero-head">
+          <Columns className="info">
+            <div className="column is-two-thirds-tablet is-three-quarters-mobile is-narrow info-container">
+              <Columns>
+                <div className="column is-7">
+                  <h3 className="is-3">Work</h3>
+                  <ul>
+                    <WorkPlace
+                      title="Kaspersky - KESCloud"
+                      subtitle="Group Manager / Team leader"
+                      linkTitle="kaspersky.com"
+                      link="https://kaspersky.com"
+                    ></WorkPlace>
+                    <WorkPlace
+                      title="Kaspersky - ThreatDeception"
+                      subtitle="Architect + FullStack + UX"
+                      linkTitle="kaspersky.com"
+                      link="https://kaspersky.com"
+                    ></WorkPlace>
+                    <WorkPlace
+                      title="ESKY"
+                      subtitle="Head of development department"
+                      linkTitle="esky.ru"
+                      link="http://esky.ru"
+                    ></WorkPlace>
+                    <WorkPlace
+                      title="RocketStudio"
+                      subtitle="Web developer"
+                      linkTitle="rocketstudio.ru"
+                      link="https://rocketstudio.ru"
+                    ></WorkPlace>
+                    <WorkPlace
+                      title="Virton"
+                      subtitle="Software developer"
+                      linkTitle="virton.ru"
+                      link="http://virton.ru"
+                    ></WorkPlace>
+                  </ul>
+                </div>
+                <div className="column is-5">
+                  <h3 className="is-3">Awards / Conferences</h3>
+                  <ul>
+                    <WorkPlace
+                      title="Intel IOT"
+                      linkTitle="intel.com"
+                      link="https://intel.com"
+                    ></WorkPlace>
+                    <WorkPlace
+                      title="Facebook hackathon"
+                      linkTitle="facebook.com"
+                      link="https://facebook.com"
+                    ></WorkPlace>
+                  </ul>
+                  <br />
+                  <h3 className="is-3">Links</h3>
+                  <ul>
+                    <WorkPlace
+                      title="Blog"
+                      linkTitle="blog.dmitrybilichenko.com"
+                      link="/blog"
+                    ></WorkPlace>
+                    <WorkPlace
+                      title="LinkedIn"
+                      linkTitle="linkedin.com/dmitry-bilichenko"
+                      link="https://www.linkedin.com/in/dmitry-bilichenko-64ab3a51/"
+                    ></WorkPlace>
+                  </ul>
+                </div>
+              </Columns>
+            </div>
+          </Columns>
+        </div>
+      </Hero>
+    </div>
   )
 }

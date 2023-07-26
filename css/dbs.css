@@ -1,0 +1,48 @@
+.App {
+  background: #222222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  padding: 100px;
+}
+
+.head-logo {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.info {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+.info-container {
+  max-width: 800px;
+}
+
+.links {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .hero {
+    padding: 20px;
+  }
+  .info {
+    font-size: 18px;
+  }
+}
+@media only screen and (device-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+  .info {
+    font-size: 18px;
+  }
+}

@@ -1,5 +1,7 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
+import '@/css/dbs.css'
+
 import 'katex/dist/katex.css'
 
 import '@fontsource/inter/variable-full.css'
@@ -23,9 +25,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }
