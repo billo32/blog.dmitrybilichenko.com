@@ -1,8 +1,6 @@
 import 'bulma/css/bulma.min.css'
 
 import { useEffect, useState } from 'react'
-// import logo from './public/static/images/bd-logo-white.svg'
-// import OwlSound from './public/owl_great_horned.mp3'
 import { Hero, Columns } from 'react-bulma-components'
 import WorkPlace from '@/components/dbs/workplace'
 import classes from '@/components/dbs/workplace.module.css'
