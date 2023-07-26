@@ -1,6 +1,6 @@
+import '@/css/dbs.css'
 import '@/css/tailwind.css'
 import '@/css/prism.css'
-import '@/css/dbs.css'
 
 import 'katex/dist/katex.css'
 

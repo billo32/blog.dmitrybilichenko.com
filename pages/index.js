@@ -3,7 +3,6 @@ import 'bulma/css/bulma.min.css'
 import { useEffect, useState } from 'react'
 import { Hero, Columns } from 'react-bulma-components'
 import WorkPlace from '@/components/dbs/workplace'
-import classes from '@/components/dbs/workplace.module.css'
 
 export default function Home() {
   const [audio, setAudio] = useState(null)
