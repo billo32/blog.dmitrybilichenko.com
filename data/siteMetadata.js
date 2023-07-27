@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog',
   author: 'Dmitry Bilichenko',
   headerTitle: '',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'Personal site with CV, contacts and notes',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
