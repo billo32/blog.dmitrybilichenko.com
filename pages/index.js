@@ -1,9 +1,7 @@
-import 'bulma/css/bulma.min.css'
 import siteMetadata from '@/data/siteMetadata'
 import { useEffect, useState } from 'react'
-import { Hero, Columns } from 'react-bulma-components'
-import WorkPlace from '@/components/dbs/workplace'
 import { PageSEO } from '@/components/SEO'
+import Place from '@/components/dbs/place'
 
 export default function Home() {
   const [audio, setAudio] = useState(null)
@@ -18,104 +16,89 @@ export default function Home() {
     <>
       <PageSEO title={`${siteMetadata.author}`} description={siteMetadata.description} />
 
-      <div className="App">
-        <Hero className="hero is-fullheight">
-          <div className="hero-head">
-            <img
-              src={'/static/images/bd-logo-white.png'}
-              onClick={() => {
-                audio.play()
-              }}
-              className="head-logo"
-              alt="logo"
-            />
+      <div className="container mx-auto flex h-screen flex-col justify-between px-10 py-24">
+        <img
+          src={'/static/images/bd-logo-white.png'}
+          onClick={() => {
+            audio.play()
+          }}
+          className="head-logo"
+          alt="logo"
+        />
+
+        <div className="max-w-3xl">
+          <p className="font-sans text-[22px] leading-8 tracking-wide">
+            I am an experienced Software Development Team Leader / IT Project Manager with a rich
+            experience in the development and implementation of software projects. Over the years, I
+            have managed projects of various complexities, from simple websites to complex worldwide
+            business process automation systems.
+          </p>
+        </div>
+      </div>
+      <div className="container mx-auto flex h-fit flex-col justify-start px-10 py-24">
+        <div className="grid max-w-3xl grid-cols-2 gap-40">
+          <div className="col-span-1">
+            <div className="mb-6 mt-12 font-sans text-[22px] font-medium leading-8 tracking-wide">
+              Work
+            </div>
+            <ul>
+              <Place
+                title="Kaspersky - KESCloud"
+                subtitle="Group Manager / Team leader"
+                linkTitle="kaspersky.com"
+                link="https://kaspersky.com"
+              ></Place>
+              <Place
+                title="Kaspersky - ThreatDeception"
+                subtitle="Architect + FullStack + UX"
+                linkTitle="kaspersky.com"
+                link="https://kaspersky.com"
+              ></Place>
+              <Place
+                title="ESKY"
+                subtitle="Head of development department"
+                linkTitle="esky.ru"
+                link="http://esky.ru"
+              ></Place>
+              <Place
+                title="RocketStudio"
+                subtitle="Web developer"
+                linkTitle="rocketstudio.ru"
+                link="https://rocketstudio.ru"
+              ></Place>
+              <Place
+                title="Virton"
+                subtitle="Software developer"
+                linkTitle="virton.ru"
+                link="http://virton.ru"
+              ></Place>
+            </ul>
           </div>
-          <div className="hero-body"></div>
-          <div className="hero-foot">
-            <Columns className="info">
-              <div className="column is-two-thirds-tablet is-three-quarters-mobile is-narrow info-container">
-                I am an experienced Software Development Team Leader / IT Project Manager with a
-                rich experience in the development and implementation of software projects. Over the
-                years, I have managed projects of various complexities, from simple websites to
-                complex worldwide business process automation systems.
-              </div>
-            </Columns>
+          <div className="col-span-1">
+            <div className="mt-12 mb-6 font-sans text-[22px] font-medium leading-8 tracking-wide">
+              Awards / Conferences
+            </div>
+            <ul>
+              <Place title="Intel IOT" linkTitle="intel.com" link="https://intel.com"></Place>
+              <Place
+                title="Facebook hackathon"
+                linkTitle="facebook.com"
+                link="https://facebook.com"
+              ></Place>
+            </ul>
+            <div className="mt-12 mb-6 font-sans text-[22px] font-medium leading-8 tracking-wide">
+              Links
+            </div>
+            <ul>
+              <Place title="Blog" linkTitle="blog.dmitrybilichenko.com" link="/blog"></Place>
+              <Place
+                title="LinkedIn"
+                linkTitle="linkedin.com/dmitry-bilichenko"
+                link="https://www.linkedin.com/in/dmitry-bilichenko-64ab3a51/"
+              ></Place>
+            </ul>
           </div>
-        </Hero>
-        <Hero className="hero is-large">
-          <div className="hero-head">
-            <Columns className="info">
-              <div className="column is-two-thirds-tablet is-three-quarters-mobile is-narrow info-container">
-                <Columns>
-                  <div className="column is-7">
-                    <h3 className="is-3">Work</h3>
-                    <ul>
-                      <WorkPlace
-                        title="Kaspersky - KESCloud"
-                        subtitle="Group Manager / Team leader"
-                        linkTitle="kaspersky.com"
-                        link="https://kaspersky.com"
-                      ></WorkPlace>
-                      <WorkPlace
-                        title="Kaspersky - ThreatDeception"
-                        subtitle="Architect + FullStack + UX"
-                        linkTitle="kaspersky.com"
-                        link="https://kaspersky.com"
-                      ></WorkPlace>
-                      <WorkPlace
-                        title="ESKY"
-                        subtitle="Head of development department"
-                        linkTitle="esky.ru"
-                        link="http://esky.ru"
-                      ></WorkPlace>
-                      <WorkPlace
-                        title="RocketStudio"
-                        subtitle="Web developer"
-                        linkTitle="rocketstudio.ru"
-                        link="https://rocketstudio.ru"
-                      ></WorkPlace>
-                      <WorkPlace
-                        title="Virton"
-                        subtitle="Software developer"
-                        linkTitle="virton.ru"
-                        link="http://virton.ru"
-                      ></WorkPlace>
-                    </ul>
-                  </div>
-                  <div className="column is-5">
-                    <h3 className="is-3">Awards / Conferences</h3>
-                    <ul>
-                      <WorkPlace
-                        title="Intel IOT"
-                        linkTitle="intel.com"
-                        link="https://intel.com"
-                      ></WorkPlace>
-                      <WorkPlace
-                        title="Facebook hackathon"
-                        linkTitle="facebook.com"
-                        link="https://facebook.com"
-                      ></WorkPlace>
-                    </ul>
-                    <br />
-                    <h3 className="is-3">Links</h3>
-                    <ul>
-                      <WorkPlace
-                        title="Blog"
-                        linkTitle="blog.dmitrybilichenko.com"
-                        link="/blog"
-                      ></WorkPlace>
-                      <WorkPlace
-                        title="LinkedIn"
-                        linkTitle="linkedin.com/dmitry-bilichenko"
-                        link="https://www.linkedin.com/in/dmitry-bilichenko-64ab3a51/"
-                      ></WorkPlace>
-                    </ul>
-                  </div>
-                </Columns>
-              </div>
-            </Columns>
-          </div>
-        </Hero>
+        </div>
       </div>
     </>
   )
