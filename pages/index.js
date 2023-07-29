@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto flex h-fit flex-col justify-start px-10 py-24">
-        <div className="grid max-w-3xl grid-cols-2 gap-40">
+        <div className="grid max-w-3xl grid-flow-row grid-cols-2 gap-40">
           <div className="col-span-1">
             <div className="mb-6 mt-12 font-sans text-[22px] font-medium leading-8 tracking-wide">
               Work
