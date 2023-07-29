@@ -5,8 +5,8 @@ const siteMetadata = {
   description: 'Personal site with CV, contacts and notes',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://dmitrybilichenko.com',
+  siteRepo: '',
   siteLogo: '/static/images/bd-logo-white.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
