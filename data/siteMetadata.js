@@ -10,7 +10,7 @@ const siteMetadata = {
   siteLogo: '/static/images/bd-logo-white.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
+  email: 'bilichenkodmitry@gmail.com',
   github: 'https://github.com',
   twitter: 'https://twitter.com/Twitter',
   facebook: 'https://facebook.com',

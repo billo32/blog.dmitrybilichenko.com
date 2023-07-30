@@ -96,6 +96,21 @@ export default function Home() {
                 linkTitle="linkedin.com/dmitry-bilichenko"
                 link="https://www.linkedin.com/in/dmitry-bilichenko-64ab3a51/"
               ></Place>
+              <a
+                href="https://www.buymeacoffee.com/dimalovecoffee"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                  alt="Buy Me A Coffee"
+                  style={{
+                    height: '40px !important',
+                    width: '150px !important',
+                    marginTop: '60px',
+                  }}
+                />
+              </a>
             </ul>
           </div>
         </div>
