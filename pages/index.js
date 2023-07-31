@@ -102,13 +102,10 @@ export default function Home() {
                 rel="noreferrer"
               >
                 <img
+                  layout="fill"
+                  className="mt-16 h-10 w-40"
                   src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
                   alt="Buy Me A Coffee"
-                  style={{
-                    height: '40px !important',
-                    width: '150px !important',
-                    marginTop: '60px',
-                  }}
                 />
               </a>
             </ul>
