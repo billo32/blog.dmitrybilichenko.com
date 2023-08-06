@@ -41,8 +41,10 @@ const Giscus = () => {
     script.setAttribute('data-emit-metadata', metadata)
     script.setAttribute('data-input-position', inputPosition)
     script.setAttribute('data-lang', lang)
+    script.setAttribute('data-loading', 'lazy')
     script.setAttribute('data-theme', commentsTheme)
     script.setAttribute('crossorigin', 'anonymous')
+
     script.async = true
 
     const comments = document.getElementById(COMMENTS_ID)
