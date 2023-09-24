@@ -15,7 +15,7 @@ I don't really know why you should want to do it, but if you want...
 
 ## Preparation for containerization
 
-First of all, in root directory of your Next application (I hope you already have got Next App) you should create Dockerfile with name **Dockerfile** and put inside folowing lines:
+First of all, in root directory of your Next application (I hope you already have got Next App) you should create Dockerfile with name **Dockerfile** and put inside following lines:
 
 ```dockerfile:Dockerfile
 # Build Stage
@@ -47,7 +47,7 @@ In any terminal go to your Next app folder (actually, you already should be here
 docker build -t my-great-app ./
 ```
 
-this command will create docker image (it's like OS with your app) for you, and after that, only one step you should - run your created **image** (created OS) in **container** (like virtual machine)
+this command will create docker image (it's like OS with your app) for you, and after that, only one step you should - run your created **image** (created OS) in **container** (it's like in virtual machine)
 
 `ERROR` if something goes wrong and you met "Docker-credential-desktop executable file not found in $PATH" error in terminal, just try https://stackoverflow.com/a/65896682 and everything should be fixed.
 
@@ -60,6 +60,6 @@ docker run -p 3000:3000 my-great-app
 
 This command will run your app on http://localhost:3000
 
-Thats it!
+That's it!
 
 If everything work well - your welcome! If not - lets discuss...
