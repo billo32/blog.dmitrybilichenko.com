@@ -2,8 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { useTheme } from 'next-themes'
 
 import siteMetadata from '@/data/siteMetadata'
+import useTranslation from 'next-translate/useTranslation'
 
 const Giscus = () => {
+  const { t } = useTranslation()
   const [enableLoadComments, setEnabledLoadComments] = useState(true)
   const { theme, resolvedTheme } = useTheme()
   const commentsTheme =
@@ -41,10 +43,8 @@ const Giscus = () => {
     script.setAttribute('data-emit-metadata', metadata)
     script.setAttribute('data-input-position', inputPosition)
     script.setAttribute('data-lang', lang)
-    script.setAttribute('data-loading', 'lazy')
     script.setAttribute('data-theme', commentsTheme)
     script.setAttribute('crossorigin', 'anonymous')
-
     script.async = true
 
     const comments = document.getElementById(COMMENTS_ID)
@@ -64,8 +64,8 @@ const Giscus = () => {
   }, [LoadComments])
 
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
-      {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
+    <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300">
+      {enableLoadComments && <button onClick={LoadComments}>{t('common:comment')}</button>}
       <div className="giscus" id={COMMENTS_ID} />
     </div>
   )

@@ -1,0 +1,10 @@
+{
+  "mail": "Dirección de correo electrónico",
+  "title": "Suscribirse a la boletín",
+  "messageError": "Su dirección de correo electrónico no es válida o ya está inscrito!",
+  "messageSuccess": "¡Exitosamente! 🎉 Usted está inscrito.",
+  "placeholderSucces": "Usted está inscrito! 🎉",
+  "placeholderDefault": "Ingrese su dirección de correo electrónico",
+  "buttonSuccess": "Gracias!",
+  "buttonDefault": "Suscribirse"
+}

@@ -1,8 +1,14 @@
 const siteMetadata = {
-  title: 'Blog',
+  title: { en: 'Blog', fr: 'Blog', ru: 'Блог', es: 'Blog', zh: '博客' },
   author: 'Dmitry Bilichenko',
-  headerTitle: '',
-  description: 'Personal site with CV, contacts and notes',
+  headerTitle: { en: 'Blog', fr: 'Blog', ru: 'Блог', es: 'Blog', zh: '博客' },
+  description: {
+    en: 'Personal site with CV, contacts and notes',
+    fr: 'Site personnel avec CV, contacts et notes',
+    ru: 'Личный сайт с CV, контактами и заметками',
+    es: 'Sitio personal con CV, contactos y notas',
+    zh: '个人网站有CV,联系方式和笔记',
+  },
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://dmitrybilichenko.com',
