@@ -18,9 +18,9 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'bilichenkodmitry@gmail.com',
   github: 'https://github.com',
-  twitter: 'https://twitter.com/billlo32',
-  facebook: 'https://facebook.com',
-  youtube: 'https://www.youtube.com/@normalnayastudiya',
+  twitter: 'https://twitter.com/billo32',
+  facebook: 'https://facebook.com/',
+  youtube: 'https://www.youtube.com/@dmitrybilichenko',
   linkedin: 'https://www.linkedin.com/in/dmitry-bilichenko-64ab3a51/',
   locale: 'en-US',
   analytics: {
