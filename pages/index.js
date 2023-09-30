@@ -38,7 +38,7 @@ export default function Home() {
       <div className="container mx-auto flex h-fit flex-col justify-start px-10 py-24">
         <div className="grid max-w-3xl grid-flow-row sm:grid-cols-1 sm:gap-0 md:grid-cols-2 md:gap-40">
           <div className="col-span-1">
-            <div className="font-sans text-[22px] font-medium leading-8 tracking-wide sm:mt-8 sm:mb-2 md:mb-6 md:mt-12">
+            <div className="font-sans text-[22px] font-medium leading-8 tracking-wide sm:mb-2 sm:mt-8 md:mb-6 md:mt-12">
               Work
             </div>
             <ul>
@@ -75,7 +75,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="col-span-1">
-            <div className="mt-12 mb-6 font-sans text-[22px] font-medium leading-8 tracking-wide">
+            <div className="mb-6 mt-12 font-sans text-[22px] font-medium leading-8 tracking-wide">
               Awards / Conferences
             </div>
             <ul>
@@ -86,7 +86,7 @@ export default function Home() {
                 link="https://facebook.com"
               ></Place>
             </ul>
-            <div className="mt-12 mb-6 font-sans text-[22px] font-medium leading-8 tracking-wide">
+            <div className="mb-6 mt-12 font-sans text-[22px] font-medium leading-8 tracking-wide">
               Links
             </div>
             <ul>
