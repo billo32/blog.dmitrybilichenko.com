@@ -1,38 +1,30 @@
 const projectsData = {
   en: [
     {
-      title: 'A Search Engine',
-      description: `What if you could look up any information in the world? Webpages, images, videos
-      and more. Google has many features to help you find exactly what you're looking
-      for.`,
-      imgSrc: '/static/images/google.png',
-      href: 'https://www.google.com',
+      title: 'The AIST project',
+      description: `What if you could look up any most important information in the media world? What about the news that people are talking about and worrying about?`,
+      imgSrc: '/static/images/projects/aist-logo.png',
+      href: '/blog/the-aist-project',
     },
     {
-      title: 'The Time Machine',
-      description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-      to the desired date and press "Go". No more worrying about lost keys or
-      forgotten handphones with this simple yet affordable solution.`,
-      imgSrc: '/static/images/time-machine.jpg',
-      href: '/blog/the-time-machine',
+      title: 'ParaPass',
+      description: `Now you can easily design and create loyalty cards, tickets, discount cards for Apple Wallet. And with a convenient API, integration becomes even easier.`,
+      imgSrc: '/static/images/projects/parapass.jpg',
+      href: '/blog/parapass',
     },
   ],
   fr: [
     {
-      title: 'Un moteur de recherche',
-      description: `Et si vous pouviez rechercher n'importe quelle information dans le monde ? Pages web, images, vidéos
-      et bien d'autres choses encore. Google propose de nombreuses fonctionnalités pour vous aider à trouver exactement ce que vous recherchez.
-      pour.`,
-      imgSrc: '/static/images/google.png',
+      title: 'The AIST project',
+      description: `Et si vous pouviez rechercher les informations les plus importantes dans le monde des médias ? Qu’en est-il des nouvelles dont les gens parlent et qui inquiètent ?`,
+      imgSrc: '/static/images/projects/aist-logo.png',
       href: 'https://www.google.com',
     },
     {
-      title: 'La machine à remonter le temps',
-      description: `Imaginez que vous puissiez voyager dans le passé ou dans le futur. Il suffit de tourner le bouton
-      sur la date souhaitée et d'appuyer sur "Go". Plus besoin de se soucier des clés perdues ou des téléphones portables oubliés avec cette solution simple et abordable.
-      ou de téléphones portables oubliés grâce à cette solution simple et abordable.`,
-      imgSrc: '/static/images/time-machine.jpg',
-      href: '/blog/the-time-machine',
+      title: 'ParaPass',
+      description: `Vous pouvez désormais facilement concevoir et créer des cartes de fidélité, des billets et des cartes de réduction pour Apple Wallet. Et grâce à une API pratique, l’intégration devient encore plus simple.`,
+      imgSrc: '/static/images/projects/parapass.jpg',
+      href: '/blog/parapass',
     },
   ],
 }

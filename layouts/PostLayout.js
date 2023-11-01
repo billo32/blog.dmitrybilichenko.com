@@ -102,8 +102,8 @@ export default function PostLayout({
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {t('common:twitter')}
                 </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{t('common:github')}</Link>
+                {/* {` • `}
+                <Link href={editUrl(fileName)}>{t('common:github')}</Link> */}
               </div>
               <Comments frontMatter={frontMatter} />
             </div>
