@@ -3,10 +3,19 @@ import Link from './Link'
 
 import useTranslation from 'next-translate/useTranslation'
 
+import { motion } from 'framer-motion'
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+}
+
 const Card = ({ title, description, imgSrc, href }) => {
   const { t } = useTranslation()
   return (
-    <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
+    <motion.div variants={item} className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
       <div
         className={`${
           imgSrc && 'h-full'
@@ -54,7 +63,7 @@ const Card = ({ title, description, imgSrc, href }) => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

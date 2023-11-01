@@ -8,6 +8,28 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 
 import useTranslation from 'next-translate/useTranslation'
 
+import { motion } from 'framer-motion'
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+}
+
 export async function getStaticProps({ defaultLocale, locale, locales }) {
   const otherLocale = locale !== defaultLocale ? locale : ''
   const tags = await getAllTags('blog', otherLocale)
@@ -31,11 +53,16 @@ export default function Tags({ tags, locale, availableLocales }) {
             Tags
           </h1>
         </div>
-        <div className="flex max-w-lg flex-wrap">
+        <motion.div
+          className="flex max-w-lg flex-wrap"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
           {Object.keys(tags).length === 0 && 'No tags found.'}
           {sortedTags.map((t) => {
             return (
-              <div key={t} className="mb-2 mr-5 mt-2">
+              <motion.div variants={item} key={t} className="mb-2 mr-5 mt-2">
                 <Tag text={t} />
                 <Link
                   href={`/tags/${kebabCase(t)}`}
@@ -43,10 +70,10 @@ export default function Tags({ tags, locale, availableLocales }) {
                 >
                   {` (${tags[t]})`}
                 </Link>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </LayoutWrapper>
   )

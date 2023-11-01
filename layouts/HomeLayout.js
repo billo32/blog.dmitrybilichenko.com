@@ -36,7 +36,7 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
         </div>
 
         <div className="max-w-3xl">
-          <p className="font-sans text-[22px] leading-8 tracking-wide">{children}</p>
+          <div className="font-sans text-[22px] leading-8 tracking-wide">{children}</div>
         </div>
       </div>
       <div className="container mx-auto flex h-fit flex-col justify-start px-10 py-24">
