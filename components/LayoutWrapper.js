@@ -10,6 +10,13 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
 
+import { motion } from 'framer-motion'
+
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+}
+
 const LayoutWrapper = ({ children }) => {
   const { t } = useTranslation()
   const router = useRouter()
@@ -68,7 +75,16 @@ const LayoutWrapper = ({ children }) => {
             <MobileNav />
           </div>
         </header>
-        <main className="mb-auto">{children}</main>
+
+        <motion.main
+          variants={variants}
+          initial="hidden"
+          animate="enter"
+          transition={{ type: 'linear' }}
+          className="mb-auto"
+        >
+          {children}
+        </motion.main>
         <Footer />
       </div>
     </SectionContainer>
