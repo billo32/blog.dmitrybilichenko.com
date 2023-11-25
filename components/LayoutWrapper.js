@@ -80,7 +80,7 @@ const LayoutWrapper = ({ children }) => {
           variants={variants}
           initial="hidden"
           animate="enter"
-          transition={{ type: 'linear' }}
+          transition={{ type: 'linear', duration: 0.5 }}
           className="mb-auto"
         >
           {children}
