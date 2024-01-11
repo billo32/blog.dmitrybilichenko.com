@@ -47,6 +47,12 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
             </div>
             <ul>
               <Place
+                title="MTS-Link - Webianar"
+                subtitle="Chaper leader / Team leader"
+                linkTitle="mts-link.ru"
+                link="https://mts-link.ru"
+              ></Place>
+              <Place
                 title="Kaspersky - KESCloud"
                 subtitle="Group Manager / Team leader"
                 linkTitle="kaspersky.com"
