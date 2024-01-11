@@ -47,7 +47,7 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
             </div>
             <ul>
               <Place
-                title="MTS-Link - Webianar"
+                title="MTS-Link - Webinar"
                 subtitle="Chaper leader / Team leader"
                 linkTitle="mts-link.ru"
                 link="https://mts-link.ru"
