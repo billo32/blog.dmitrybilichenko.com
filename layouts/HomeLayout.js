@@ -47,6 +47,12 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
             </div>
             <ul>
               <Place
+                title="SMART EdTech - LMS"
+                subtitle="Head of development"
+                linkTitle="smart-inc.ru"
+                link="https://smart-inc.ru/"
+              ></Place>
+              <Place
                 title="MTS-Link - Webinar"
                 subtitle="Chapter leader / Team leader"
                 linkTitle="mts-link.ru"
@@ -89,6 +95,11 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
               Awards / Conferences
             </div>
             <ul>
+              <Place
+                title="MTS Link hackathon"
+                linkTitle="mts-link.ru"
+                link="https://mts-link.ru"
+              ></Place>
               <Place title="Intel IOT" linkTitle="intel.com" link="https://intel.com"></Place>
               <Place
                 title="Facebook hackathon"
