@@ -96,7 +96,7 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
             </div>
             <ul>
               <Place
-                title="MTS Link hackathon"
+                title="MTS-Link hackathon"
                 linkTitle="mts-link.ru"
                 link="https://mts-link.ru"
               ></Place>
