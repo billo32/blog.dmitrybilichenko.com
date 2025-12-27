@@ -47,6 +47,12 @@ export default function HomeLayout({ children, frontMatter, availableLocales }) 
             </div>
             <ul>
               <Place
+                title="TradingView - Paper Trading"
+                subtitle="Unit leader / Senior manager"
+                linkTitle="tradingview.com"
+                link="https://tradingview.com/"
+              ></Place>
+              <Place
                 title="SMART EdTech - LMS"
                 subtitle="Head of development"
                 linkTitle="smart-inc.ru"
